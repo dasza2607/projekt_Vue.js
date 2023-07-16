@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Domki dla zwierząt</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://kit.fontawesome.com/df88dd0bec.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="nav">
+    <div class="dropdown">
+        <span class="dropdown-item" @click="toggleDropdownIcon">
+                <button><i v-if="!showDropdown" class="fa-solid fa-paw"></i>
+                <i v-else class="fa-solid fa-bars-staggered"></i>
+                </button></span>     
+          <div class="dropdown-content" v-if="showDropdown">
+            <ul>
+                <li class="dropdown-item" v-for="item in menuItems" :key="item.name">
+                    <a :href="item.link">{{ item.name }}</a>
+                </li>
+            </ul>    
+          </div>
+        </div>
+    <h1 class="titleText">Najlepsze domki dla zwierząt</h1>
+        <ul class="text"><span class="text1">U nas znajdziesz</span>
+        <li v-for="item in items">{{item}}</li>  
+        </ul>
+        <ul class="text"><span class="text1">Mamy domki<br>zaprojektowane dla różnych<br><span class="text2">zwieżąt</span></span>
+        <li v-for="item2 in items2">{{item2}}</li>
+        </ul>
+        <div class="center"></div>
+    <div class="images">
+        <img :src="image1" />
+        <img :src="image2" />
+        <img :src="image3" />
+        <img :src="image4" />
+        <img :src="image5" />
+        </div>
+      </div>
+  
+          </div>
+      </div>
+
+    <div id="app">
+      <div class="input">
+        <label for="search">Wyszukaj:</label><br><br>
+        <input type="text" id="search" v-model="searchTerm" placeholder="Wprowadź nazwę produktu">
+      </div>
+
+      <table align="center">
+        <thead>
+          <tr>
+            <th @click="sortProducts('name')">Nazwa<i class="fa-solid fa-sort"></i></th>
+            <th @click="sortProducts('category')">Kategoria<i class="fa-solid fa-sort"></i></th>
+            <th @click="sortProducts('price')">Cena<i class="fa-solid fa-sort"></i></th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="product in filteredProducts" :key="product.id">
+            <td>{{ product.name }}</td>
+            <td>{{ product.category }}</td>
+            <td>{{ product.price }} zł</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="add">
+        <h2>Dodaj nowy produkt</h2>
+        <div>
+          <label for="productName">Nazwa:</label>
+          <input type="text" id="productName" v-model="newProduct.name">
+        </div>
+        <div>
+          <label for="productCategory">Kategoria:</label>
+          <input type="text" id="productCategory" v-model="newProduct.category">
+        </div>
+        <div>
+          <label for="productPrice">Cena:</label>
+          <input type="number" id="productPrice" v-model="newProduct.price">
+        </div><br>
+        <button class="btnAdd" @click="addProduct">Dodaj produkt</button>
+      </div>
+      </div>
+    </div>
+    <div id="calculat">
+      <div>
+        <label for="amount">Kwota:</label>
+        <input type="number" id="amount" v-model="amount">
+      </div>
+      <div>
+        <label for="from">Mam:</label>
+        <select id="from" v-model="fromCurrency">
+          <option v-for="currency in currencies" :value="currency.code" :key="currency.code">
+            {{ currency.name }}
+          </option>
+        </select>
+      </div>
+      <div>
+        <label for="to">Chcę otrzymać:</label>
+        <select id="to" v-model="toCurrency">
+          <option v-for="currency in currencies" :value="currency.code" :key="currency.code">
+            {{ currency.name }}
+          </option>
+        </select>
+      </div>
+      <div>
+       <br><button class="btnCalculat" @click="convert">Przelicz</button>
+      </div>
+      <div>
+        <p class="result">Wynik: {{ result }}</p>
+      </div>
+    <div class="cat">
+        <div class="ear ear--left"></div>
+        <div class="ear ear--right"></div>
+       
+        <div class="face">
+       
+        <div class="eye eye--left">
+        <div class="eye-pupil"></div>
+        </div>
+        <div class="eye eye--right">
+        <div class="eye-pupil"></div>
+        </div>
+        <div class="muzzle"></div>
+       
+        </div>
+       
+       </div>
+  
+  <script src="js.js"></script>
+</body>
+</html>
