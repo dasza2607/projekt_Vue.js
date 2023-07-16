@@ -27,7 +27,7 @@
         <ul class="text"><span class="text1">U nas znajdziesz</span>
         <li v-for="item in items">{{item}}</li>  
         </ul>
-        <ul class="text"><span class="text1">Mamy domki<br>zaprojektowane dla różnych<br><span class="text2">zwieżąt</span></span>
+        <ul class="text"><span class="text1">Mamy domki<br>zaprojektowane dla różnych<br><span class="text2">zwierząt</span></span>
         <li v-for="item2 in items2">{{item2}}</li>
         </ul>
         <div class="center"></div>
@@ -39,23 +39,19 @@
         <img :src="image5" />
         </div>
       </div>
-  
           </div>
       </div>
-
-    <div id="app">
+  <div id="app">
       <div class="input">
         <label for="search">Wyszukaj:</label><br><br>
         <input type="text" id="search" v-model="searchTerm" placeholder="Wprowadź nazwę produktu">
       </div>
-
       <table align="center">
         <thead>
           <tr>
             <th @click="sortProducts('name')">Nazwa<i class="fa-solid fa-sort"></i></th>
             <th @click="sortProducts('category')">Kategoria<i class="fa-solid fa-sort"></i></th>
-            <th @click="sortProducts('price')">Cena<i class="fa-solid fa-sort"></i></th>
-            
+            <th @click="sortProducts('price')">Cena<i class="fa-solid fa-sort"></i></th>   
           </tr>
         </thead>
         <tbody>
@@ -82,8 +78,8 @@
         </div><br>
         <button class="btnAdd" @click="addProduct">Dodaj produkt</button>
       </div>
-      </div>
-    </div>
+   </div>
+  </div>
     <div id="calculat">
       <div>
         <label for="amount">Kwota:</label>
@@ -114,21 +110,16 @@
     <div class="cat">
         <div class="ear ear--left"></div>
         <div class="ear ear--right"></div>
-       
         <div class="face">
-       
         <div class="eye eye--left">
         <div class="eye-pupil"></div>
         </div>
         <div class="eye eye--right">
         <div class="eye-pupil"></div>
         </div>
-        <div class="muzzle"></div>
-       
-        </div>
-       
-       </div>
-  
+        <div class="muzzle"></div>      
+        </div> 
+    </div>  
   <script src="js.js"></script>
 </body>
 </html>
