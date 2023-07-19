@@ -62,7 +62,7 @@ new Vue({
       }
     },
     methods: {
-      sortProducts(column) {u
+      sortProducts(column) {
         if (column === this.sortBy) {
           this.sortDirection = this.sortDirection === 'asc' ? 'desc' : 'asc';
         } else {
