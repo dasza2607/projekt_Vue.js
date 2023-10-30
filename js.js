@@ -67,7 +67,6 @@ new Vue({
         this.sortBy = column;
         this.sortDirection = 'asc';
       }
-
       this.products.sort((a, b) => {
         const aValue = a[column];
         const bValue = b[column];
@@ -110,7 +109,7 @@ new Vue({
 })
 
 new Vue({
-  el: '#calculat',
+  el: '.calculat',
   data: {
     amount: null,
     fromCurrency: '',
