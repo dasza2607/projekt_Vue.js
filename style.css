@@ -1,172 +1,19 @@
-body {
-	height: 100%;
-	background: #f8f7f7;
-	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-.center{
-  position: fixed;
-  display: block;
-  width: 600px;
-  height: 1250px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-  background-image:url(images/pobrane.png);
-  opacity: 0.4;
+body{
+	margin: 0;
+	padding: 0;
 }
 
-.dropdown-item button{
-	width: 50px;
-	height: 40px;
-	border-radius: 30px;
-}
-.dropdown-item button :hover{
-	color: rgb(158, 14, 136);
-
-}
-.dropdown-content li{
-	display: inline;
-	list-style: none;
-	margin-left: 80px;
-	
+.info{
+	color: red;
 }
 
-.titleText{
-	text-align: center;
-	margin-top: 80px;
-	color: rgb(42, 42, 44);
-	text-decoration:overline;
-	font-size: 40px;
-	
-}
-
-.images img{
-	display: block;
-    margin-left: auto;
-    margin-right: auto;
-	margin-top: -300px;
-	width: 300px;
-	height: 300px;
-	padding-bottom: 325px;
-}
-
-ul .text1{
-
-	font-size: 25px;
-	text-decoration: wavy;
-	color: rgb(158, 14, 136);
-	padding: 60px;
-	text-align:center;
-}
-
-.text1 li{
-	padding-top: 20px;
-	font-size: 20px;
-	text-decoration:dashed;
-	list-style:none;
-}
-.text li{
-	padding-top: 10px;
-}
-
-.text2{
-	margin-left: 80px;
-}
-
-#app{
-	margin-left: 1000px;
-	margin-top: -2000px;
-	
-}
-
-.input, .add{
-	text-align: center;
-	padding: 10px;
-}
-
-.input label, .add label, #calculat label{
-	font-size: 20px;
-}
-
-.input input{
-	width: 280px;
-	height: 40px;
-}
-
-.add input{
-	display: block;
-	margin-left: 50px;
-	padding: 20px;
-	width: 180px;
-	height: 10px;
-}
-table{
-	width: 100%;
-	border: 1px solid #dddddd;
-	border-collapse: collapse; 
-}
-
-table th {
-	font-weight: bold;
-	padding: 5px;
-	background: #efefef;
-	border: 1px solid #dddddd;
-}
-table td {
-	border: 1px solid #dddddd;
-	padding: 5px;
-}
-
-.btnAdd{
-	width: 140px;
-	height: 30px;
-	padding: 1px;
-}
-
-.btnAdd:hover {
-	transition: all 0.4s;
-	box-shadow: 0 7px 14px rgba(53, 4, 47, 0.1), 0 3px 6px rgb(0 0 0 / 8%);
-}
-.btnAdd:active {
-	background-color: #808080;
-}
-
-#calculat{
-	display:block;
-	background-color: #e6d3d3;
-	width: 200px;
-	margin-left: 1050px;
-	margin-top: 100px;
-	padding: 20px;
-	padding-top: 50px;
-}
-
-#calculat input{
-	width: 120px;
-	height: 20px;
-}
-
-.btnCalculat{
-	margin-left: 40px;
-	width: 140px;
-	height: 30px;
-	padding: 1px;
-}
-
-.result{
-	font-size: 30px;
-	color: #520606;
-	font-style: italic;
-}
+/*Cat*/
 .cat {
 	height: 70px;
 	width: 82.1px;
-    right: 0;
-	top:0;
-	margin-top: 47px;
 	position: absolute;
-	margin-right: 620px;
+	right: 20px;
+
 }
 
 .ear {
@@ -174,7 +21,7 @@ table td {
 	top: -30%;
 	height: 60%;
 	width: 25%;
-	background: #494545;
+	background: #190b0b;
 }
 
 .ear::before,
@@ -362,3 +209,129 @@ table td {
 	transform: translateX(-50%);
 	border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
 }
+
+@media (max-width: 768px) {
+    .eye-pupil::after {
+        height: 10%;
+        width: 20%;
+    }
+    
+    @keyframes look-around {
+        0% {
+            transform: translate(0);
+        }
+        5% {
+            transform: translate(20%, -10%);
+        }
+        /* Другие изменения анимации по мере необходимости */
+    }
+}
+
+
+
+  .images img{
+	
+	width: 200px;
+	height: 150px;
+	
+	z-index: 1;
+
+}
+
+/*
+
+.col-lg-1{
+	
+}
+
+
+
+#app{
+	margin-left: 1000px;
+	margin-top: -2000px;
+	
+}
+
+.input, .add{
+	text-align: center;
+	padding: 10px;
+}
+
+.input label, .add label, #calculat label{
+	font-size: 20px;
+}
+
+.input input{
+	width: 280px;
+	height: 40px;
+}
+
+.add input{
+	display: block;
+	margin-left: 50px;
+	padding: 20px;
+	width: 180px;
+	height: 10px;
+}
+table{
+	width: 100%;
+	border: 1px solid #dddddd;
+	border-collapse: collapse; 
+}
+
+table th {
+	font-weight: bold;
+	padding: 5px;
+	background: #efefef;
+	border: 1px solid #dddddd;
+}
+table td {
+	border: 1px solid #dddddd;
+	padding: 5px;
+}
+
+.btnAdd{
+	width: 140px;
+	height: 30px;
+	padding: 1px;
+}
+
+.btnAdd:hover {
+	transition: all 0.4s;
+	box-shadow: 0 7px 14px rgba(53, 4, 47, 0.1), 0 3px 6px rgb(0 0 0 / 8%);
+}
+.btnAdd:active {
+	background-color: #808080;
+}
+
+#calculat{
+	display:block;
+	background-color: #e6d3d3;
+	width: 200px;
+	margin-left: 1050px;
+	margin-top: 100px;
+	padding: 20px;
+	padding-top: 50px;
+}
+
+#calculat input{
+	width: 120px;
+	height: 20px;
+}
+
+.btnCalculat{
+	margin-left: 40px;
+	width: 140px;
+	height: 30px;
+	padding: 1px;
+}
+
+.result{
+	font-size: 30px;
+	color: #520606;
+	font-style: italic;
+}
+
+
+
+*/
