@@ -7,6 +7,11 @@ body{
 	color: red;
 }
 
+img{
+	height: 170px;
+	width: 190px;
+}
+
 /*Cat*/
 .cat {
 	height: 70px;
@@ -226,14 +231,7 @@ body{
     }
 }
 
-  .images img{
-	
-	width: 200px;
-	height: 150px;
-	
-	z-index: 1;
 
-}
 
 /*
 

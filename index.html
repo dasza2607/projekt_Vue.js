@@ -72,12 +72,8 @@
         <div class="img col-lg text-center">
         <span class="images">
             <img :src="image1" />
-            <img :src="image2" />
-            <!--<img :src="image3" />
-            <img :src="image4" />
-            <img :src="image5" />
-            <img :src="image6" />-->
-            </span>
+            <img :src="image6" />
+        </span>
         </div>
         <div class="app col-lg text-center">
             <label for="search">Wyszukaj:</label><br><br>
@@ -99,36 +95,11 @@
             </table>
           </div>
       </div>
+      
       <div class="row">
-        <div class="app col-lg">
-          <h2>Dodaj nowy produkt</h2>
-          <div>
-            <label for="productName">Nazwa:</label>
-            <input type="text" id="productName" v-model="newProduct.name">
-          </div>
-          <div>
-            <label for="productCategory">Kategoria:</label>
-            <input type="text" id="productCategory" v-model="newProduct.category">
-          </div>
-          <div>
-            <label for="productPrice">Cena:</label>
-            <input type="number" id="productPrice" v-model="newProduct.price">
-          </div><br>
-          <button class="btnAdd" @click="addProduct">Dodaj produkt</button>
-        </div>
-        </div>
-      </div>
-        </div>
-        <div class="img col-lg text-center">
-        <span class="images">
-            <img :src="image3" />
-            <img :src="image4" />
-            </span>
-        </div>
-        <div class="calculat col-lg text-center">
+        <div class="calculate col-lg">
           <label for="amount">Kwota:</label>
           <input type="number" id="amount" v-model="amount">
-        </div>
         <div>
           <label for="from">Mam:</label>
           <select id="from" v-model="fromCurrency">
@@ -151,9 +122,38 @@
         <div>
           <p class="result">Wynik: {{ result }}</p>
       </div>
+        </div>
+        <div class="img1 col-lg text-center">
+        <span class="images">
+            <img :src="image3" />
+            <img :src="image5" />
+        </span>
+        </div>
+          <div class="add col-lg">
+            <h2>Dodaj nowy produkt</h2>
+            <div>
+              <label for="productName">Nazwa:</label>
+              <input type="text" id="productName" v-model="newProduct.name">
+            </div>
+            <div>
+              <label for="productCategory">Kategoria:</label>
+              <input type="text" id="productCategory" v-model="newProduct.category">
+            </div>
+            <div>
+              <label for="productPrice">Cena:</label>
+              <input type="number" id="productPrice" v-model="newProduct.price">
+            </div><br>
+            <button class="btnAdd" @click="addProduct">Dodaj produkt</button>
+          </div>
+          </div>
+      </div>
+
+
     </div>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script src="js.js"></script>
 </body>
 </html>
+
+
