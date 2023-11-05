@@ -1,6 +1,7 @@
 body{
 	margin: 0;
 	padding: 0;
+	background-image: url(./images/fon..png);
 }
 
 .info{
@@ -8,325 +9,48 @@ body{
 }
 
 img{
-	height: 170px;
-	width: 190px;
+	max-width: 100%;
 }
 
-/*Cat*/
-.cat {
-	height: 70px;
-	width: 82.1px;
-	position: absolute;
-	right: 20px;
-
-}
-
-.ear {
-	position: absolute;
-	top: -30%;
-	height: 60%;
-	width: 25%;
-	background: #190b0b;
-}
-
-.ear::before,
-.ear::after {
-	content: '';
-	position: absolute;
-	bottom: 24%;
-	height: 10%;
-	width: 5%;
-	border-radius: 50%;
-	background: #1e1e20;
+img:hover{
+	border: #989595 solid;
 	
 }
 
-.ear::after {
-	transform-origin: 50% 100%;
-}
-
-.ear--left {
-	left: -7%;
-	border-radius: 70% 30% 0% 0% / 100% 100% 0% 0%;
-	transform: rotate(-15deg);
-}
-
-.ear--left::before,
-.ear--left::after {
-	right: 10%;
-}
-
-.ear--left::after {
-	transform: rotate(-45deg);
-}
-
-.ear--right {
-	right: -7%;
-	border-radius: 30% 70% 0% 0% / 100% 100% 0% 0%;
-	transform: rotate(15deg);
-}
-
-.ear--right::before,
-.ear--right::after {
-	left: 10%;
-}
-
-.ear--right::after {
-	transform: rotate(45deg);
-}
-
-.face {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	background: #161616;
-	border-radius: 50%;
-}
-
-.eye {
-	position: absolute;
-	top: 35%;
-	height: 30%;
-	width: 31%;
-	background: #fff;
-	border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-}
-
-.eye::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 0;
-	width: 100%;
-	border-radius: 0 0 50% 50% / 0 0 40% 40%;
-	background: #0a0a0a;
-	animation: blink 4s infinite ease-in;
-}
-
-@keyframes blink {
+  @keyframes scroll {
 	0% {
-		height: 0;
-	}
-	90% {
-		height: 0;
-	}
-	92.5% {
-		height: 100%;
-	}
-	95% {
-		height: 0;
-	}
-	97.5% {
-		height: 100%;
+	  transform: translateX(0);
 	}
 	100% {
-		height: 0;
+	  transform: translateX(calc(-275px * 7));
 	}
+  }
+  
+.new {
+	overflow: hidden;
+	box-sizing: border-box;
+	position: relative;
+	width: auto;
+}
+  
+.wrapper__new {
+animation: scroll 15s linear infinite;
+display: flex;
+width: calc(275px * 14);
+}
+  
+.img__wrap {
+display: flex;
+margin-right: 20px; 
+border: #a3a0a0 solid;
 }
 
-.eye::before {
-	content: '';
-	position: absolute;
-	top: 60%;
-	height: 10%;
-	width: 15%;
-	background: #fff;
-	border-radius: 50%;
+.new h2{
+text-align: center;
 }
 
-.eye--left {
-	left: 0;
-}
-
-.eye--left::before {
-	right: -5%;
-}
-
-.eye--right {
-	right: 0;
-}
-
-.eye--right::before {
-	left: -5%;
-}
-
-.eye-pupil {
-	position: absolute;
-	top: 25%;
-	height: 50%;
-	width: 20%;
-	background: #47414e;
-	border-radius: 50%;
-	animation: look-around 4s infinite;
-}
-
-@keyframes look-around {
-	0% {
-		transform: translate(0);
-	}
-	5% {
-		transform: translate(50%, -25%);
-	}
-	10% {
-		transform: translate(50%, -25%);
-	}
-	15% {
-		transform: translate(-100%, -25%);
-	}
-	20% {
-		transform: translate(-100%, -25%);
-	}
-	25% {
-		transform: translate(0, 0);
-	}
-	100% {
-		transform: translate(0, 0);
-	}
-}
-
-.eye--left .eye-pupil {
-	right: 30%;
-}
-
-.eye--right .eye-pupil {
-	left: 30%;
-}
-
-.eye-pupil::after {
-	content: '';
-	position: absolute;
-	top: 30%;
-	right: -5%;
-	height: 20%;
-	width: 35%;
-	border-radius: 50%;
-	background: #fff;
-}
-
-.muzzle {
-	position: absolute;
-	top: 60%;
-	left: 50%;
-	height: 6%;
-	width: 10%;
-	background: #fff;
-	transform: translateX(-50%);
-	border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
-}
-
-@media (max-width: 768px) {
-    .eye-pupil::after {
-        height: 10%;
-        width: 20%;
-    }
-    
-    @keyframes look-around {
-        0% {
-            transform: translate(0);
-        }
-        5% {
-            transform: translate(20%, -10%);
-        }
-    }
+.items ul{
+list-style:none;	
 }
 
 
-
-/*
-
-.col-lg-1{
-	
-}
-
-
-
-#app{
-	margin-left: 1000px;
-	margin-top: -2000px;
-	
-}
-
-.input, .add{
-	text-align: center;
-	padding: 10px;
-}
-
-.input label, .add label, #calculat label{
-	font-size: 20px;
-}
-
-.input input{
-	width: 280px;
-	height: 40px;
-}
-
-.add input{
-	display: block;
-	margin-left: 50px;
-	padding: 20px;
-	width: 180px;
-	height: 10px;
-}
-table{
-	width: 100%;
-	border: 1px solid #dddddd;
-	border-collapse: collapse; 
-}
-
-table th {
-	font-weight: bold;
-	padding: 5px;
-	background: #efefef;
-	border: 1px solid #dddddd;
-}
-table td {
-	border: 1px solid #dddddd;
-	padding: 5px;
-}
-
-.btnAdd{
-	width: 140px;
-	height: 30px;
-	padding: 1px;
-}
-
-.btnAdd:hover {
-	transition: all 0.4s;
-	box-shadow: 0 7px 14px rgba(53, 4, 47, 0.1), 0 3px 6px rgb(0 0 0 / 8%);
-}
-.btnAdd:active {
-	background-color: #808080;
-}
-
-#calculat{
-	display:block;
-	background-color: #e6d3d3;
-	width: 200px;
-	margin-left: 1050px;
-	margin-top: 100px;
-	padding: 20px;
-	padding-top: 50px;
-}
-
-#calculat input{
-	width: 120px;
-	height: 20px;
-}
-
-.btnCalculat{
-	margin-left: 40px;
-	width: 140px;
-	height: 30px;
-	padding: 1px;
-}
-
-.result{
-	font-size: 30px;
-	color: #520606;
-	font-style: italic;
-}
-
-
-
-*/

@@ -14,8 +14,8 @@
     <h2 class="info">Strona w trakcie modernizacji</h2>
     <nav class="navbar navbar-expand-md navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"><i class="fa-solid fa-paw"></i></a>
-        <p class="text-sm-center"><b>Najlepsze domki dla zwierząt</b></p>
+        <a class="navbar-brand" href="#"><i class="fa-solid fa-paw"></i> Najlepsze domki dla zwierząt</a>
+       
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -37,31 +37,11 @@
       </div>
     </div>
   </nav>
-  <div class="container">
-    <div class="row">
-      <div class="col mt-auto">
-        <div class="cat"> 
-          <div class="ear ear--left"></div>
-          <div class="ear ear--right"></div>
-          <div class="face">
-            <div class="eye eye--left">
-              <div class="eye-pupil"></div>
-            </div>
-            <div class="eye eye--right">
-              <div class="eye-pupil"></div>
-            </div>
-            <div class="muzzle"></div>
-          </div>
-        </div>
-      </div>
-      </div>
-    </div>
-  </div>
-  </header>
+
   <main>
-    <div class="container mt-5">
-      <div class="row">
-        <div class="items col-lg">
+    <div class="container-fluid">
+      <div class="items row mt-5 text-center">
+        <div class=" col-md-3">
           <ul class="text"><b>U nas znajdziesz</b>
             <li v-for="item in items">{{item}}</li>  
             </ul>
@@ -69,14 +49,15 @@
             <li v-for="item2 in items2">{{item2}}</li>
             </ul>
         </div>
-        <div class="img col-lg text-center">
-        <span class="images">
-            <img :src="image1" />
-            <img :src="image6" />
-        </span>
-        </div>
-        <div class="app col-lg text-center">
-            <label for="search">Wyszukaj:</label><br><br>
+        <div class="col-6 col-sm-2 mx-auto"><img :src="images.image1" /></div>
+        <div class="col-6 col-sm-2 mx-auto "><img :src="images.image2" /></div>
+        <div class="col-6 col-sm-2 mx-auto"><img :src="images.image3" /></div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="app row mt-5 text-center">
+        <div class="col-md-3">
+          <label for="search">Wyszukaj:</label><br><br>
             <table>
               <thead>
                 <tr>
@@ -93,64 +74,120 @@
                 </tr>
               </tbody>
             </table>
-          </div>
+        </div>
+          <div class="col-6 col-sm-2 mx-auto"><img :src="images.image4" /></div>
+          <div class="col-6 col-sm-2 mx-auto"><img :src="images.image5" /></div>
+          <div class="col-6 col-sm-2 mx-auto"><img :src="images.image6" /></div>
       </div>
-      
-      <div class="row">
-        <div class="calculate col-lg">
-          <label for="amount">Kwota:</label>
-          <input type="number" id="amount" v-model="amount">
-        <div>
-          <label for="from">Mam:</label>
-          <select id="from" v-model="fromCurrency">
-            <option v-for="currency in currencies" :value="currency.code" :key="currency.code">
-              {{ currency.name }}
-            </option>
-          </select>
-        </div>
-        <div>
-          <label for="to">Chcę otrzymać:</label>
-          <select id="to" v-model="toCurrency">
-            <option v-for="currency in currencies" :value="currency.code" :key="currency.code">
-              {{ currency.name }}
-            </option>
-          </select>
-        </div>
-        <div>
-         <br><button class="btnCalculat" @click="convert">Przelicz</button>
-        </div>
-        <div>
-          <p class="result">Wynik: {{ result }}</p>
-      </div>
-        </div>
-        <div class="img1 col-lg text-center">
-        <span class="images">
-            <img :src="image3" />
-            <img :src="image5" />
-        </span>
-        </div>
-          <div class="add col-lg">
-            <h2>Dodaj nowy produkt</h2>
-            <div>
-              <label for="productName">Nazwa:</label>
-              <input type="text" id="productName" v-model="newProduct.name">
-            </div>
-            <div>
-              <label for="productCategory">Kategoria:</label>
-              <input type="text" id="productCategory" v-model="newProduct.category">
-            </div>
-            <div>
-              <label for="productPrice">Cena:</label>
-              <input type="number" id="productPrice" v-model="newProduct.price">
-            </div><br>
-            <button class="btnAdd" @click="addProduct">Dodaj produkt</button>
-          </div>
-          </div>
-      </div>
-
-
     </div>
+    <section class="new">
+      <h2 class="wnew__title">Nowości</h2>
+      <div class="wrapper__new">
+        <div class="img__wrap">
+          <a href="#"><img src="./images/nowość1.jpeg" alt="nowość1"></a>
+        </div>
+        <div class="img__wrap">
+          <a href="#"><img src="./images/nowość2.jpg" alt="nowość2"></a>
+        </div>
+        <div class="img__wrap">
+          <a href="#"><img src="./images/nowość3.jpg" alt="nowość3"></a>
+        </div>
+        <div class="img__wrap">
+          <a href="#"><img src="./images/nowość4.jpg" alt="nowość4"></a>
+        </div>
+        <div class="img__wrap">
+          <a href="#"><img src="./images/nowość5.jpg" alt="nowość5"></a>
+        </div>
+        <div class="img__wrap">
+          <a href="#"><img src="./images/nowość6.jpg" alt="nowość6"></a>
+        </div>
+        <div class="img__wrap">
+          <a href="#"><img src="./images/nowość7.jpg" alt="nowość7"></a>
+        </div>
+        <div class="img__wrap">
+          <a href="#"><img src="./images/nowość1.jpeg" alt="nowość1"></a>
+        </div>
+        <div class="img__wrap">
+          <a href="#"><img src="./images/nowość2.jpg" alt="nowość2"></a>
+        </div>
+        <div class="img__wrap">
+          <a href="#"><img src="./images/nowość3.jpg" alt="nowość3"></a>
+        </div>
+        <div class="img__wrap">
+          <a href="#"><img src="./images/nowość4.jpg" alt="nowość4"></a>
+        </div>
+        <div class="img__wrap">
+          <a href="#"><img src="./images/nowość5.jpg" alt="nowość5"></a>
+        </div>
+        <div class="img__wrap">
+          <a href="#"><img src="./images/nowość6.jpg" alt="nowość6"></a>
+        </div>
+        <div class="img__wrap">
+          <a href="#"><img src="./images/nowość7.jpg" alt="nowość7"></a>
+        </div>
+      </div>
+    </section>
+
+   <!--<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./images/nowość1.jpeg" alt="nowość1">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/nowość2.jpg" alt="nowość2">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/nowość3.jpg" alt="nowość3">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/nowość4.jpg" alt="nowość4">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/nowość5.jpg" alt="nowość5">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/nowość6.jpg" alt="nowość6">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/nowość7.jpg" alt="nowość7">
+        </div>
+      </div>
+    </div>
+   --> 
   </main>
+
+<!--<div class="row">
+        <div class="app col-md-3 offset-md-9">
+          <div class="calculate col-lg">
+            <label for="amount">Kwota:</label>
+            <input type="number" id="amount" v-model="amount">
+          <div>
+            <label for="from">Mam:</label>
+            <select id="from" v-model="fromCurrency">
+              <option v-for="currency in currencies" :value="currency.code" :key="currency.code">
+                {{ currency.name }}
+              </option>
+            </select>
+          </div>
+          <div>
+            <label for="to">Chcę otrzymać:</label>
+            <select id="to" v-model="toCurrency">
+              <option v-for="currency in currencies" :value="currency.code" :key="currency.code">
+                {{ currency.name }}
+              </option>
+            </select>
+          </div>
+          <div>
+           <br><button class="btnCalculat" @click="convert">Przelicz</button>
+          </div>
+          <div>
+            <p class="result">Wynik: {{ result }}</p>
+        </div>
+        </div>
+        </div>
+      </div>
+    </div>-->
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script src="js.js"></script>
 </body>
