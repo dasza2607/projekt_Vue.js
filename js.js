@@ -108,7 +108,6 @@ new Vue({
   }
 })
 
-
 new Vue({
   el: '.calculate',
   data: {
@@ -138,3 +137,4 @@ new Vue({
     }
   }
 })
+

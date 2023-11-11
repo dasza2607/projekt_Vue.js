@@ -53,4 +53,7 @@ text-align: center;
 list-style:none;	
 }
 
+input{
+	border-radius: 15px;
+}
 

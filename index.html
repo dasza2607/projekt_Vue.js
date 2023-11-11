@@ -31,7 +31,7 @@
           </li>
           <li class="nav-item mx-5">
             <a class="nav-link" href="#">Kontakt</a>
-          </li>       
+          </li>           
         </ul>      
       </div>
     </div>
@@ -55,8 +55,8 @@
     <div class="container-fluid">
       <div class="app row mt-5 text-center">
         <div class="col-md-3">
-          <label for="search">Wyszukaj:</label><br><br>
-            <table>
+          <label for="search">Wyszukaj<br><input type="search" v-model="searchTerm"></label><br><br>
+            <table class="center">
               <thead>
                 <tr>
                   <th @click="sortProducts('name')">Nazwa<i class="fa-solid fa-sort"></i></th>
@@ -77,6 +77,27 @@
           <div class="col-6 col-sm-2 mx-auto"><img :src="images.image5" /></div>
           <div class="col-6 col-sm-2 mx-auto"><img :src="images.image6" /></div>
       </div>
+    </div>
+    <div class="container-fluid mt-5">
+        <div class="calculate col-lg d-inline">
+          <label for="amount">Kwota:</label>
+          <input type="number" id="amount" v-model="amount">
+          <label for="from">Mam:</label>
+          <select id="from" v-model="fromCurrency">
+            <option v-for="currency in currencies" :value="currency.code" :key="currency.code">
+              {{ currency.name }}
+            </option>
+          </select>
+          <label for="to">Chcę otrzymać:</label>
+          <select id="to" v-model="toCurrency">
+            <option v-for="currency in currencies" :value="currency.code" :key="currency.code">
+              {{ currency.name }}
+            </option>
+          </select>
+          <button class="btnCalculat" @click="convert">Przelicz</button> Wynik: {{ result }}
+      </div>
+      </div>
+    </div>
     </div>
     <section class="new">
       <h2 class="wnew__title">Nowości</h2>
@@ -125,6 +146,48 @@
         </div>
       </div>
     </section>
+    <footer class="bg-light mt-5 container-fluid">
+
+        <table class="table table-borderless">
+          <thead>
+            <tr>
+              <th scope="col">Zamówienia</th>
+              <th scope="col">Konto</th>
+              <th scope="col">Informacje</th>
+              <th scope="col">Regulaminy</th> 
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td scope="row">Status zamówienia</td>
+              <td>Zarejestruj się jako hurtownik</td>
+              <td>Newsletter</td>
+              <td>Wysyłka</td>
+            </tr>
+            <tr>
+              <td scope="row">Śledzenie przesyłki</td>
+              <td>Zarejestruj się</td>
+              <td>Polityka prywatności</td>
+              <td>Sposoby płatności i prowizje</td>
+            </tr>
+            <tr>
+              <td scope="row">Chcę zareklamować produkt</td>
+              <td colspan="2">Koszyk</td>
+              <td>Odstąpienie od umowy</td>
+            </tr>
+            <tr>
+              <td scope="row">Chcę zwrócić produkt</td>
+              <td colspan="2">Listy zakupowe</td>
+              <td>Kariera</td>
+            </tr>
+            <tr>
+              <td scope="row">Chcę wymienić produkt</td>
+              <td colspan="2">Historia transakcji</td>
+              <td>Rabaty</td>
+            </tr>
+          </tbody>
+        </table>
+    </footer>
 
    <!--<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
